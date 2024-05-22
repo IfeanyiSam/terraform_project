@@ -72,6 +72,12 @@ resource "aws_security_group" "test-backend-sg" {
     to_port         = 0
     security_groups = [aws_security_group.test-instance-sg.id]
   }
+  ingress {
+    from_port       = 3306
+    protocol        = "tcp"
+    to_port         = 0
+    security_groups = [aws_security_group.test-bastion-sg.id]
+  }
 }
 
 resource "aws_security_group_rule" "sec-group-for-itself" {

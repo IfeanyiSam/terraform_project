@@ -26,11 +26,15 @@ variable "RMQUSER" {
 }
 
 variable "RMQPASS" {
-  default = "syco@123456"
+  default = "syco@1234567890"
 }
 
 variable "DBNAME" {
   default = "accounts"
+}
+
+variable "DB_IDENTIFIER" {
+  default = "test-db-instance"
 }
 
 variable "DBPASS" {
